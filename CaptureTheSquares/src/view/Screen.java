@@ -1,6 +1,9 @@
+package view;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
+
+import model.IGrid;
 
 
 public class Screen extends JFrame{
@@ -9,7 +12,7 @@ public class Screen extends JFrame{
 	
 	IGrid grid;
 	
-	Screen(IGrid grid){
+	public Screen(IGrid grid){
 		this.setTitle("Capture the Squares");
 		this.setLayout(null);
 		this.setSize(new Dimension(400, 400));
