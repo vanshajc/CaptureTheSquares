@@ -1,5 +1,10 @@
 package model;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
+import view.Screen;
+
 
 public class Grid implements IGrid{
 
@@ -19,8 +24,15 @@ public class Grid implements IGrid{
 	}
 	
 	@Override
-	public void display() {
+	public void display(Graphics g) {
 		// TODO Auto-generated method stub
+		
+		for (int i = 0; i < width; i++){
+			for (int j = 0; j < height; j++){
+				g.setColor(Color.GRAY);
+				g.fillOval(i*Screen.WIDTH/(width) + 10, j*Screen.HEIGHT/(height) + 10, 10, 10);
+			}
+		}
 		
 	}
 

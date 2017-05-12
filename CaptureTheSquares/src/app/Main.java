@@ -1,7 +1,9 @@
 package app;
-import view.Screen;
+import javax.swing.JFrame;
+
 import model.Grid;
 import model.IGrid;
+import view.Screen;
 
 
 public class Main {
@@ -12,6 +14,11 @@ public class Main {
 		
 		IGrid g = new Grid(10, 10);
 		Screen s = new Screen(g);
+		
+		JFrame f = new JFrame();
+		f.add(s);
+		f.setSize(Screen.WIDTH, Screen.HEIGHT);
+		f.setVisible(true);
 		
 	}
 }
