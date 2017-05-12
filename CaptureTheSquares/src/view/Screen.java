@@ -15,7 +15,7 @@ public class Screen extends JPanel implements Runnable{
 	private static final long serialVersionUID = 1L;
 	public static final int WIDTH = 400, HEIGHT = 500;
 
-	IGrid grid;
+	public IGrid grid;
 
 	private Thread thread;
 	private boolean running = false;
@@ -62,6 +62,11 @@ public class Screen extends JPanel implements Runnable{
 	
 	public void tick(){
 		// Do nothing.
+		try {
+			Thread.sleep(250);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void paint(Graphics g){
