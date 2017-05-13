@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import javax.swing.JPanel;
 
 import model.IGrid;
+import controller.MouseController;
 
 
 public class Screen extends JPanel implements Runnable{
@@ -29,6 +30,8 @@ public class Screen extends JPanel implements Runnable{
 		this.setBackground(Color.WHITE);
 		this.grid = grid;
 
+		this.addMouseListener(new MouseController(grid));
+		
 		this.setVisible(true);
 
 		this.start();
@@ -63,7 +66,7 @@ public class Screen extends JPanel implements Runnable{
 	public void tick(){
 		// Do nothing.
 		try {
-			Thread.sleep(250);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

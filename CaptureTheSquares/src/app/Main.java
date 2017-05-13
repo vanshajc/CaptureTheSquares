@@ -20,7 +20,10 @@ public class Main {
 		f.setSize(Screen.WIDTH, Screen.HEIGHT);
 		f.setVisible(true);
 		
-		System.out.println("Move " + s.grid.makeMove(10, 10, 50, 10, 1));
+		//System.out.println("Move " + s.grid.makeMove(10, 10, 60, 10, 1));
+		System.out.println("Move " + s.grid.makeMove(10, 10, 10, 60, 2));
+		//System.out.println("Move " + s.grid.makeMove(60, 10, 60, 50, 1));
+		//System.out.println("Move " + s.grid.makeMove(10, 60, 50, 60, 2));
 		
 	}
 }
